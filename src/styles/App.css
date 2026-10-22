@@ -1,0 +1,7 @@
+.container {
+  flex: 1; /* grows to fill the free space, so the footer stays at the bottom */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
