@@ -1,0 +1,35 @@
+.status {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.status-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--muted);
+}
+
+.status-error {
+  border: 1px solid var(--loss);
+  color: var(--loss);
+}
+
+/* A circle with one coloured side, rotating */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

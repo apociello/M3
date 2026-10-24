@@ -1,0 +1,37 @@
+.player-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
+
+.player-name {
+  font-size: 1.5rem;
+  overflow-wrap: anywhere;
+}
+
+.title-badge {
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #7c2929;
+  color: #fff;
+  font-size: 0.85rem;
+  vertical-align: middle;
+}
+
+.profile-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.profile-link:hover {
+  text-decoration: underline;
+}
