@@ -1,0 +1,30 @@
+.ratings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.625rem;
+  background: var(--surface-2);
+}
+
+.rating-label {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.rating-value {
+  font-size: 1.35rem;
+}
+
+.rating-best {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
