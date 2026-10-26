@@ -45,3 +45,16 @@ h3 {
   color: var(--muted);
   font-size: 0.9rem;
 }
+
+/* Win / draw / loss colours, shared by the game rows and the report bar */
+.result-win {
+  background: var(--accent);
+}
+
+.result-draw {
+  background: var(--draw);
+}
+
+.result-loss {
+  background: var(--loss);
+}

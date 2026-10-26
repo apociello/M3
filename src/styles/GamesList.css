@@ -1,0 +1,5 @@
+.games {
+  display: grid;
+  gap: 2px;
+  list-style: none;
+}
