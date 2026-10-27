@@ -1,0 +1,15 @@
+.outcome-bar {
+  display: flex;
+  height: 1.625rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.segment {
+  display: grid;
+  place-items: center;
+  min-width: 1.625rem;
+}

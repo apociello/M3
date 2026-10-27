@@ -46,4 +46,28 @@ function prepareGames(rawGames, username, now = Date.now()) {
     .toSorted((a, b) => b.playedAt - a.playedAt);
 }
 
-export { RECENT_DAYS, prepareGames, summarizeRatings };
+// [game, game, ...] -> { win: 12, draw: 3, loss: 5 }
+function countOutcomes(games) {
+  return games.reduce(
+    (counts, game) => ({ ...counts, [game.outcome]: counts[game.outcome] + 1 }),
+    { win: 0, draw: 0, loss: 0 },
+  );
+}
+
+function winRate(counts) {
+  const total = counts.win + counts.draw + counts.loss;
+  return total === 0 ? 0 : Math.round((counts.win / total) * 100);
+}
+
+function buildReport(games) {
+  const counts = countOutcomes(games);
+  return {
+    total: games.length,
+    counts,
+    winRate: winRate(counts),
+    whiteWinRate: winRate(countOutcomes(games.filter((game) => game.color === 'white'))),
+    blackWinRate: winRate(countOutcomes(games.filter((game) => game.color === 'black'))),
+  };
+}
+
+export { RECENT_DAYS, buildReport, prepareGames, summarizeRatings };
