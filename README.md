@@ -2,6 +2,8 @@
 
 A Chess.com player scouting app built with React and Vite.
 
+🔗 [Live Demo](https://m3-three-wheat.vercel.app/)
+
 ## Features
 
 - Search any Chess.com player by username
