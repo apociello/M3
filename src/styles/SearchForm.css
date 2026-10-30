@@ -16,6 +16,13 @@
   background: var(--surface-2);
   color: inherit;
   font: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.search input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-ring);
 }
 
 .search button {
@@ -23,10 +30,21 @@
   border: 0;
   border-radius: 0.5rem;
   background: var(--accent);
+  box-shadow: 0 4px 0 var(--accent-dark);
   color: var(--accent-text);
   font: inherit;
   font-weight: 700;
   cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s, filter 0.1s;
+}
+
+.search button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.search button:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 var(--accent-dark);
 }
 
 .search button:disabled {

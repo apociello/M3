@@ -14,6 +14,8 @@
   --muted: #a39e95; /* secondary text */
   --accent: #81b64c; /* Chess.com green: button, links, wins */
   --accent-text: #1b1a17; /* text on top of the green */
+  --accent-dark: #45753c; /* button "thickness" for the 3D effect */
+  --accent-ring: rgba(129, 182, 76, 0.35); /* soft green focus halo */
   --draw: #8d887f;
   --loss: #e0654d; /* losses and errors */
 }
@@ -34,6 +36,11 @@ body {
 
 a {
   color: var(--accent);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent-ring);
+  outline-offset: 2px;
 }
 
 h3 {

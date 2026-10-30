@@ -19,6 +19,7 @@ function SearchForm({ onSearch }) {
         placeholder="Chess.com username, e.g. hikaru"
         aria-label="Chess.com username"
         autoComplete="off"
+        spellCheck={false}
       />
       <button type="submit" disabled={username === ''}>
         Scout
